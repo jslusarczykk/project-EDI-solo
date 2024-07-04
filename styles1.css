@@ -1,0 +1,136 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-size: cover;
+    animation: colorChange 10s infinite alternate;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img.top-right-photo {
+    float: right;
+    margin: 0 0 10px 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.column {
+    width: 30%;
+    margin: 0 2%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+#internet form {
+    margin-top: 20px;
+}
+
+#internet form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#internet form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#internet form button {
+    background-color: #e74c3c;
+}
+
+#internet form button:hover {
+    background-color: #c0392b;
+}
+
+#dane {
+    background-color: #f9ebc6;
+}
+
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+body.backgroundGifOn {
+    background-image: url('swiatlo.gif');
+    background-size: cover;
+    animation: colorChange 20s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(90deg);
+    }
+}

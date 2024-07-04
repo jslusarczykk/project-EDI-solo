@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt Indywidualny - Informatyka Stosowana</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body class="backgroundGifOn">
+    <section>
+        <h2>Autor: Jan Ślusarczyk</h2>
+        <p>
+            Studiuję Informatykę Stosowaną na Uniwersytecie Ekonomicznym. Jestem na pierwszym roku studiów.
+            Wybrałem te studia, ponieważ sylabus tego kierunku najbardziej odpowiadał moim zainteresowaniom.
+            Moje oczekiwania dotyczące studiów skupiają się na zdobyciu praktycznych umiejętności oraz rozwinięciu się w obszarze programowania.
+            Moje dotychczasowe osiągnięcia to zdobycie certyfikatu C1 z języka angielskiego i zdanie prawa jazdy.
+            Jeśli chodzi o plany zawodowe to w przyszłości chciałbym pracować jako programista.
+            Oprócz tego, moje zainteresowania to tenis, badminton, taniec i siłownia.
+            Jako ozdobę graficzną dołączam zdjęcie mojego kota. 
+            <img src="kotek.jpg" alt="Kotek nie został pobrany" class="top-right-photo">
+        </p>
+    </section>
+    <button id="toggleBackgroundButton" onclick="toggleBackgroundGif()">Toggle Background GIF</button>
+    <script src="scriptdziala.js"></script>
+    <section id="dane">
+        <h2>Dane Projektu</h2>
+        <p>
+            Dane dotyczą zamówień informatyków z pizzerii, pierwszy wiersz to id zamówienia, drugi i trzeci wiersz to imię i nazwisko klienta.
+            W kolejnych wierszach mamy kolejno: email,numer telefonu, informację czy klient już kiedyś coś zamawiał z pizzerii,
+            datę zamówienia, płeć klienta, wartość zamówienia i datę urodzin klienta. 
+        </p>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Phone number</th>
+                    <th>First time order</th>
+                    <th>Order date</th>
+                    <th>Gender</th>
+                    <th>Order total</th>
+                    <th>Client birthday</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+        <script>
+            const dataString = `1,Brena,Lambard,blambard0@fema.gov,618-115-3099,true,9/18/2023,Female,1711.83 zł,8/3/1969
+                                2,Bertrand,Surmeyers,bsurmeyers1@home.pl,802-994-3636,true,2/3/2022,Male,760.01 zł,10/29/1956
+                                3,Clare,Demko,cdemko2@nasa.gov,980-918-5703,false,12/11/2019,Male,74.74 zł,12/23/1932
+                                4,Saxon,Kisbee,skisbee3@is.gd,617-101-9553,true,9/25/2022,Male,2097.70 zł,8/17/1961
+                                5,Tamarah,Kleinholz,tkleinholz4@globo.com,202-276-6846,false,11/13/2019,Female,101.14 zł,9/16/1930
+                                6,Annadiane,Jore,ajore5@imgur.com,554-770-7742,false,12/3/2021,Female,482.51 zł,4/19/1932
+                                7,Marvin,Robertson,mrobertson6@printfriendly.com,527-376-8314,true,6/19/2022,Male,1550.30 zł,3/23/1996
+                                8,Jude,Denham,jdenham7@wordpress.org,167-198-3729,false,6/3/2020,Male,1195.05 zł,8/1/1994
+                                9,Madeline,Brixham,mbrixham8@independent.co.uk,892-618-9720,true,10/30/2020,Female,169.04 zł,1/28/1942
+                                10,Anallese,Crook,acrook9@unesco.org,743-197-3933,true,7/4/2023,Female,505.89 zł,9/17/1954`;
+    
+            const rows = dataString.split('\n');
+            const tableBody = document.getElementById('tableBody');
+    
+            rows.forEach(row => {
+                const cells = row.split(',');
+                const newRow = document.createElement('tr');
+    
+                cells.forEach(cellData => {
+                    const newCell = document.createElement('td');
+                    newCell.textContent = cellData;
+                    newRow.appendChild(newCell);
+                });
+    
+                tableBody.appendChild(newRow);
+            });
+        </script>
+      <div class="column">
+        <h3>Format XML</h3>
+        <p>XML (Extensible Markup Language) to język znaczników do reprezentowania strukturalnych danych w formie tekstowej. Charakteryzuje się hierarchiczną strukturą opartą na znacznikach.</p>
+        </div>
+        <div class="column">
+            <h3>Format CSV</h3>
+            <p>CSV (Comma-Separated Values) to prosty format przechowujący dane tabelaryczne w formie tekstu. Każdy rekord reprezentowany jest jako linia, a pola oddzielane są przecinkami.</p>
+        </div>
+        <div class="column">
+            <h3>Format JSON</h3>
+            <p>JSON (JavaScript Object Notation) to lekki format wymiany danych, często używany w języku JavaScript. Jest czytelny dla ludzi i łatwo przyswajalny, a dane są reprezentowane w postaci obiektów.</p>
+        </div>
+        </div>
+        <a href="xml.txt">Show xml File</a>
+        <a href="csv.txt">Show csv File</a>
+        <a href="mock.json">Show json File</a>
+      <div class="column">
+    <section id="internet">
+        <h2>formularz</h2>
+        <p> 
+            <a href="https://www.amazon.com/s" target="_blank">
+                <img src="amazon.png" alt="Amazon Search" width="200" height="100">
+            </a>
+        
+            <form action="https://www.amazon.com/s" method="get" target="_blank">
+                <label for="searchQuery">Search on Amazon:</label>
+                <input type="text" id="searchQuery" name="k" placeholder="Enter your search term" required>
+                <button type="submit">Search</button>
+            </form>
+        </p>
+    </section>
+</body>
+</html>
